@@ -1,11 +1,11 @@
-b9c465b8692faf09988285266fe35dd3 *DESCRIPTION
+26ef6c12bc1e3525f82890a622c326a2 *DESCRIPTION
 768064935920069c2cb205623556a20b *NAMESPACE
 7ee7fc5be1d5c7fd3239e40a37f97bc6 *R/MPCR.R
 76e95f4a66495def4276fc514fd4c4c7 *build/vignette.rds
 b9359b14a5c8f4268fafea8fa2584731 *cleanup
-9f0c9af24ed426963491859823c8e2f7 *configure
+0eebf1059d669aa66cfd9ccbc090f355 *configure
 77a67fc3edd1b0c2889ffca82902e245 *inst/doc/MCPR.Rnw
-a867bf398a351462ced56fc9e17b082c *inst/doc/MCPR.pdf
+3edd1c52df263408231454ae42c89259 *inst/doc/MCPR.pdf
 542b2d7cd714a6f9c61d4f4416ba62af *inst/include/adapters/RBasicUtilities.hpp
 d429ba5e7008244810943d164366ed9b *inst/include/adapters/RBinaryOperations.hpp
 96120262e83264c191f1b353cbceb4b8 *inst/include/adapters/RHelpers.hpp
@@ -60,7 +60,7 @@ a6de1e9f02db72b70a6c9b31dfb587ad *man/Miscellaneous.Rd
 c40751b2cb978bf975d54e3c2a1b7411 *man/NAFunctions.Rd
 7031ea495d4e27af69375efaeefa7fd2 *man/Norm.Rd
 4e2abcc5a0784a4ef30838f7c922f877 *man/QR.Rd
-3c65864b2a5eb33506efaa5bcf2dc625 *man/Rcond.Rd
+d173b152fc630712f959209823af785c *man/Rcond.Rd
 2be1f56d69490ff9f5ac0bd1ff8e008c *man/Replicate.Rd
 42cb5c996bcde2e39c538d65fe19616b *man/Rounding.Rd
 9498421f4ecbba22da36c2da52656c73 *man/SVD.Rd
@@ -71,7 +71,7 @@ cbfb6e1e87a802a357be9867f228e01f *man/Sweep.Rd
 ba5ac64dcf238b9864d5f1fecc6e3dc2 *man/Transpose.Rd
 72573f0430703b8c31e8851c8db8006c *man/TrigFunctions.Rd
 a83471e2a80b28d8de5ac6e6b3988592 *src/CMakeLists.txt
-82c942f6edae4d5f9923315f98d42b40 *src/CMakeLists_inv.txt
+ca7659bcff2a20c145b685f7dc55529c *src/CMakeLists_inv.txt
 ed13aa9c7d8086c6827f1d780ad8e717 *src/DataTypeModule.cpp
 3e977ef61b25d945e73837d30a395bf1 *src/MPCRTileModule.cpp
 b063408726342eacee43537997222841 *src/Makefile
@@ -86,8 +86,9 @@ f8518628a343919b7069fb6cdb4f12ea *src/adapters/RBasicUtilities.cpp
 e9c69ac060350cba74d4a9ac0f907043 *src/cmake/CMakeParseImplicitLinkInfo.cmake
 f47752361b0180e29c37f69a16d15fa5 *src/cmake/CheckFortranFunctionExists.cmake
 51fadeec99576f8631df3109d52dc7cd *src/cmake/CheckFunctionExists.cmake
-d1ffa71d20a4b70e440a9bd9ce4e0aa7 *src/cmake/CheckInstall.cmake
+222a42c7bf00c428d6fab6f706ca39e2 *src/cmake/CheckInstall.cmake
 fb106fac2724d1c097b1c8b9b108833c *src/cmake/CreateSymbolTable.R
+3ec838698c18653daa2eab8727c31bab *src/cmake/DetectToolchain.cmake
 052c6e7b98071b5974e47ccc62aa8ab4 *src/cmake/FindBLAS.cmake
 0250947598c99d39c025f1ffeb618cff *src/cmake/FindLAPACK.cmake
 7c8a0bb25088ee6b5c5a9fd5b71105e4 *src/cmake/FindPackageHandleStandardArgs.cmake
@@ -102,6 +103,9 @@ c06b6d52ff9a4184480206c915509051 *src/cmake/ImportLapack.cmake
 d1166c83c3e9d19d7be98f3331418a2d *src/cmake/ImportOpenMP.cmake
 2a5790dbbde226cea61ca2b81a95a414 *src/cmake/ImportOpenMP_MacoOS.cmake
 ad1baae1cff566f862049bc3c814d926 *src/cmake/macros/BuildDependency.cmake
+6d88d6bdcbcceff19119de675400d375 *src/cmake/toolchains/clang.cmake
+04be93c58a6b6be9a7b934022c5f36c8 *src/cmake/toolchains/gnu.cmake
+cb2ebdfc07b8a8eb69a43d009c429a7d *src/cmake/toolchains/intel.cmake
 106a3bef3d0047aeb16541a87d9aa063 *src/data-units/CMakeLists.txt
 ed3686e248fc082377533a3a88f34093 *src/data-units/DataType.cpp
 c60f6b3b8d80d97b491061c3d0c498e0 *src/data-units/MPCRTile.cpp
@@ -112,7 +116,7 @@ c76a137d7d6dd502ea5e7dde35c11e69 *src/operations/CMakeLists.txt
 bbbf7cc84ccddb6354950fb896931f81 *src/operations/LinearAlgebra.cpp
 41788a15b5afd0c1e8aac50b98d30f50 *src/operations/MathematicalOperations.cpp
 2842162761415a204db363258e624cbf *src/operations/TileLinearAlgebra.cpp
-1489185381338715039bbc7e73885e63 *src/symbols.rds
+60c3b164b694bbc72de080552921afeb *src/symbols.rds
 e4a85311318e67df3c5799e2e5def1f4 *tests/R-tests/SerializationExample.R
 5fa05c343e694d8256e91385d4b0fc1f *tests/R-tests/TestMPCRClass.R
 0f041c2ba4355a5684b97d92e79a18e8 *tests/R-tests/TestMPCRTile.R

@@ -1,8 +1,8 @@
 Package: MPCR
 Type: Package
 Title: Multi- And Mixed-Precision Computations
-Version: 1.1
-Date: 2024-01-22
+Version: 1.1.1
+Date: 2024-05-01
 Author: David Helmy [aut],
   Sameh Abdulah [cre],
   KAUST King Abdullah University of Science and Technology [fnd, cph]
@@ -12,7 +12,7 @@ License: GPL (>= 3)
 Imports: methods, Rcpp (>= 1.0.9)
 Depends: R (>= 3.6.0)
 RoxygenNote: 7.2.3
-SystemRequirements: CMake (>=3.20) , C++ (>= 11)
+SystemRequirements: CMake (>= 3.19.4) , C++ (>= 11) , git (>= 2.0.0)
 NeedsCompilation: yes
 OS_type: unix
 Authors@R: c(
@@ -22,6 +22,6 @@ Authors@R: c(
     )
 URL: https://github.com/stsds/MPCR
 BugReports: https://github.com/stsds/MPCR/issues
-Packaged: 2024-02-22 08:48:16 UTC; david
+Packaged: 2024-05-01 09:17:54 UTC; david
 Repository: CRAN
-Date/Publication: 2024-03-19 19:40:02 UTC
+Date/Publication: 2024-05-21 14:10:06 UTC
