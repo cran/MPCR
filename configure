@@ -63,6 +63,9 @@ mv "${ABSOLUTE_PATH}/src/CMakeLists_inv.txt" "${ABSOLUTE_PATH}/CMakeLists.txt"
 rm -rf bin/
 mkdir bin/
 
+echo "-----------------------------------------------------------------------"
+env
+echo "-----------------------------------------------------------------------"
 
 # Check if cmake is installed
 if command -v cmake /dev/null 2>&1; then
