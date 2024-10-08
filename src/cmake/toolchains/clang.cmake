@@ -43,8 +43,24 @@ set(USE_CLANG ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -march=native -g -O0 -fPIC")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -march=native -O3 -fPIC")
+
+if (APPLE)
+    EXECUTE_PROCESS(COMMAND uname -m COMMAND tr -d '\n' OUTPUT_VARIABLE ARCHITECTURE)
+    if (${ARCHITECTURE} MATCHES "arm64")
+        set(MPCR_COMPILE_FLAGS "-mcpu=apple-m1 -g -O0 -fPIC")
+    else ()
+        set(MPCR_COMPILE_FLAGS "-march=native -g -O0 -fPIC")
+    endif ()
+else ()
+    set(MPCR_COMPILE_FLAGS "-march=native -g -O0 -fPIC")
+endif ()
+
+
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${MPCR_COMPILE_FLAGS}")
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${MPCR_COMPILE_FLAGS}")
+
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${MPCR_COMPILE_FLAGS}")
+set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${MPCR_COMPILE_FLAGS}")
 
 # Obtain Clang compiler version
 execute_process(
@@ -62,3 +78,8 @@ message(STATUS "Detected Clang version: ${CLANG_VERSION}")
 add_definitions(-DCLANG_VERSION=${CLANG_VERSION})
 
 message(STATUS "--------------- Using Clang Compiler -------------- [Version ${CLANG_VERSION}]")
+
+message(STATUS "C Compile Flags: ${CMAKE_C_FLAGS_RELEASE}")
+message(STATUS "CXX Compile Flags: ${CMAKE_CXX_FLAGS_RELEASE}")
+message(STATUS "C Compile Flags for the compiler : ${C_MPCR_FLAGS}")
+message(STATUS "CXX Compile Flags for the compiler : ${CXX_MPCR_FLAGS}")

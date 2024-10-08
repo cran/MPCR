@@ -33,7 +33,7 @@ install_cmake() {
   rm -rf "$temp_dir"
 }
 
-COMPILE_FLAGS="-w -Wno-dev"
+COMPILE_FLAGS="-fPIC -w -Wno-dev"
 # Check the operating system type
 OS_TYPE=$(uname -s)
 echo $OS_TYPE
@@ -44,7 +44,7 @@ if [ "$OS_TYPE" = "Darwin" ]; then
   *) ABSOLUTE_PATH="$PWD/${1#./}" ;;
   esac
 
-  COMPILE_FLAGS="-w -Wno-dev"
+  COMPILE_FLAGS="-fPIC -w -Wno-dev"
 else
   ABSOLUTE_PATH=$(dirname $(realpath "$0"))
 fi
@@ -63,9 +63,6 @@ mv "${ABSOLUTE_PATH}/src/CMakeLists_inv.txt" "${ABSOLUTE_PATH}/CMakeLists.txt"
 rm -rf bin/
 mkdir bin/
 
-echo "-----------------------------------------------------------------------"
-env
-echo "-----------------------------------------------------------------------"
 
 # Check if cmake is installed
 if command -v cmake /dev/null 2>&1; then
