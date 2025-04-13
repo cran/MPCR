@@ -1,8 +1,8 @@
 Package: MPCR
 Type: Package
 Title: Multi- And Mixed-Precision Computations
-Version: 1.1.3
-Date: 2024-10-03
+Version: 1.1.4
+Date: 2025-04-13
 Author: David Helmy [aut],
   Sameh Abdulah [cre],
   KAUST King Abdullah University of Science and Technology [fnd, cph]
@@ -22,6 +22,6 @@ Authors@R: c(
     )
 URL: https://github.com/stsds/MPCR
 BugReports: https://github.com/stsds/MPCR/issues
-Packaged: 2024-10-08 17:39:47 UTC; david
+Packaged: 2025-04-13 09:19:34 UTC; david
 Repository: CRAN
-Date/Publication: 2024-10-08 20:50:02 UTC
+Date/Publication: 2025-04-13 15:50:10 UTC

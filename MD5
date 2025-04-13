@@ -1,11 +1,11 @@
-d20e9c9b5503a66ec754987c96b890ad *DESCRIPTION
+5fc49074995716a60881cee76b34b65e *DESCRIPTION
 768064935920069c2cb205623556a20b *NAMESPACE
 7ee7fc5be1d5c7fd3239e40a37f97bc6 *R/MPCR.R
 76e95f4a66495def4276fc514fd4c4c7 *build/vignette.rds
-b9359b14a5c8f4268fafea8fa2584731 *cleanup
+c7e300a22813d7b731f2204c540b23e1 *cleanup
 9f0c9af24ed426963491859823c8e2f7 *configure
 77a67fc3edd1b0c2889ffca82902e245 *inst/doc/MCPR.Rnw
-25eb9f4f6fb763f35f0c38a82a16ec4d *inst/doc/MCPR.pdf
+d79a78aa52e66e67c9d5d0bf232dcd04 *inst/doc/MCPR.pdf
 542b2d7cd714a6f9c61d4f4416ba62af *inst/include/adapters/RBasicUtilities.hpp
 d429ba5e7008244810943d164366ed9b *inst/include/adapters/RBinaryOperations.hpp
 96120262e83264c191f1b353cbceb4b8 *inst/include/adapters/RHelpers.hpp
@@ -95,7 +95,7 @@ dcf28e12a38e59d534947544a1fb0a91 *src/cmake/DetectToolchain.cmake
 2b8da7cd5ebcd01501bd5dfe6479fe3d *src/cmake/FindPackageMessage.cmake
 f66ace6f28ac131387d6143734bc8b6a *src/cmake/FindR.cmake
 52db0822a1dac33d681e2600374c16c6 *src/cmake/FindRLibraryPath.R
-b97b55e8df186b31bfc34ff85ff5a427 *src/cmake/ImportBlas.cmake
+2420088d304fa520a81a370508ff4ebe *src/cmake/ImportBlas.cmake
 d9137316cadfdf0eb536d038ad8e1e72 *src/cmake/ImportBlasPP.cmake
 fe015a73e2b363aad9aedf106f914c92 *src/cmake/ImportGFortran.cmake
 c06b6d52ff9a4184480206c915509051 *src/cmake/ImportLapack.cmake
@@ -116,7 +116,7 @@ c76a137d7d6dd502ea5e7dde35c11e69 *src/operations/CMakeLists.txt
 0d1f76801a217f0ecc28de5a360c6cce *src/operations/LinearAlgebra.cpp
 41788a15b5afd0c1e8aac50b98d30f50 *src/operations/MathematicalOperations.cpp
 2842162761415a204db363258e624cbf *src/operations/TileLinearAlgebra.cpp
-5a798297402ec73012f80047e344ae29 *src/symbols.rds
+95e30dbff460114d61b96a107721337c *src/symbols.rds
 e4a85311318e67df3c5799e2e5def1f4 *tests/R-tests/SerializationExample.R
 5fa05c343e694d8256e91385d4b0fc1f *tests/R-tests/TestMPCRClass.R
 0f041c2ba4355a5684b97d92e79a18e8 *tests/R-tests/TestMPCRTile.R
