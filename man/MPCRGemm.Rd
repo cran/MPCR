@@ -1,4 +1,4 @@
-\name{39-MPCR GEMM}
+\name{38-MPCR GEMM}
 \alias{MPCR GEMM}
 \alias{MPCR.gemm}
 \alias{MPCR.gemm,Rcpp_MPCR-method}
@@ -32,5 +32,16 @@
  \value{
    An MPCR matrix.
  }
-
+ \examples{
+   \dontrun{
+   library(MPCR)
+   # create 3 MPCR matrices a,b,c
+   a <- as.MPCR(1:12, 3, 4, "double")
+   b <- as.MPCR(1:20, 4, 5, "double")
+   c <- as.MPCR(matrix(0, 3, 5), 3, 5, "double")
+   print(c)
+   MPCR.gemm(a,b,c,transpose_a=FALSE,transpose_b=TRUE,alpha=1,beta=1)
+   print(c)
+   }
+ }
 

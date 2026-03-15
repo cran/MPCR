@@ -1,4 +1,4 @@
-\name{27-Print}
+\name{26-Print}
 \alias{print}
 \alias{MPCR.str}
 \alias{print,Rcpp_MPCR-method}

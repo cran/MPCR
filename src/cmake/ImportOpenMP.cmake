@@ -12,7 +12,7 @@ else ()
     if (APPLE)
         find_package(OpenMP)
         if (NOT OPENMP_FOUND)
-            include(${PROJECT_SOURCE_DIR}/cmake/ImportOpenMP_MacoOS.cmake)
+        include(${PROJECT_SOURCE_DIR}/cmake/ImportOpenMP_MacoOS.cmake)
         endif ()
     else ()
         find_package(OpenMP)
@@ -24,6 +24,6 @@ else ()
         set(LIBS
                 OpenMP::OpenMP_CXX
                 ${LIBS}
-        )
+                )
     ENDIF ()
 endif ()

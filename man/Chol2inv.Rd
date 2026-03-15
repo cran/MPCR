@@ -1,4 +1,4 @@
-\name{29-Cholesky inverse}
+\name{28-Cholesky inverse}
 \alias{chol2inv}
 \alias{chol2inv,Rcpp_MPCR-method}
 \alias{MPCR.chol2inv}
@@ -20,7 +20,7 @@ An MPCR object.
 Performs the inverse of the original matrix using the Cholesky factorization of an MPCR matrix x.
 }
 \examples{
-  \donttest{
+  \dontrun{
   library(MPCR)
   x <- as.MPCR(c(1.21, 0.18, 0.13, 0.41, 0.06, 0.23,
                  0.18, 0.64, 0.10, -0.16, 0.23, 0.07,

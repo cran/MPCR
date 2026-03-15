@@ -1,0 +1,16 @@
+bibentry(
+  bibtype = "Article",
+  title   = "MPCR: Multi-Precision Computing in R",
+  author  = c(
+    person("Mary Lai O.", "Salvana"),
+    person("Sameh", "Abdulah"),
+    person("Minwoo", "Kim"),
+    person("David", "Helmy"),
+    person("Ying", "Sun"),
+    person("Marc G.", "Genton")
+  ),
+  journal = "arXiv preprint",
+  note    = "arXiv:2406.02701",
+  year    = "2024",
+  url     = "https://arxiv.org/abs/2406.02701"
+)

@@ -1,4 +1,4 @@
-\name{37-Singular value decomposition}
+\name{36-Singular value decomposition}
 \alias{svd}
 \alias{La.svd,Rcpp_MPCR-method}
 \alias{svd,Rcpp_MPCR-method}
@@ -30,7 +30,7 @@ The SVD decomposition of the MPCR matrix.
 }
 
 \examples{
-\donttest{
+\dontrun{
 library(MPCR)
 svd_vals <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
               0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0,

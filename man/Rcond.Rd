@@ -1,4 +1,4 @@
-\name{35-Reciprocal condition}
+\name{34-Reciprocal condition}
 \alias{rcond}
 \alias{rcond,Rcpp_MPCR-method}
 \alias{MPCR.rcond}
@@ -24,9 +24,7 @@ Compute matrix norm.
 \donttest{
 library(MPCR)
 
-x <- as.MPCR(1:25,precision="double")
-x$ToMatrix(5,5)
-
+x <- as.MPCR(1:20,precision="double")
 rcond(x)
 }
 }

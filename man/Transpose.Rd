@@ -1,4 +1,4 @@
-\name{24-Transpose}
+\name{23-Transpose}
 \alias{transpose}
 \alias{MPCR.t}
 \alias{t,Rcpp_MPCR-method}

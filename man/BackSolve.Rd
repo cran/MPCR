@@ -1,4 +1,4 @@
-\name{38-Back/Forward solve}
+\name{37-Back/Forward solve}
 \alias{forwardsolve,Rcpp_MPCR,Rcpp_MPCR-method}
 \alias{backsolve,Rcpp_MPCR,Rcpp_MPCR-method}
 
@@ -34,13 +34,14 @@ Solves a system of linear equations where the coefficient matrix is upper or low
 }
 
 \examples{
-\donttest{
+\dontrun{
   library(MPCR)
   a <- matrix(c(2, 0, 0, 3), nrow = 2)
   b <- matrix(c(1, 2), nrow = 2)
   a_MPCR <- as.MPCR(a,2,2,"single")
   b_MPCR <- as.MPCR(b,2,1,"double")
-  x <- backsolve(a_MPCR, b_MPCR)
+  x <- forwardsolve(a_MPCR, b_MPCR)
+  x
 }
 }
 

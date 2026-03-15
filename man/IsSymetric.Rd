@@ -1,4 +1,4 @@
-\name{32-Symmetric}
+\name{31-Symmetric}
 \alias{isSymmetric}
 \alias{isSymmetric,Rcpp_MPCR-method}
 \alias{MPCR.isSymmetric}
@@ -19,10 +19,13 @@ A logical value.
 Check if a given MPCR matrix is symmetric.
 }
 \examples{
-  \donttest{
+\dontrun{
 library(MPCR)
 
 x <- as.MPCR(1:50,25,2,"Single")
 isSymmetric(x)                      #false
+
+crossprod_output<-crossprod(x)
+isSymmetric(crossprod_output)       #true
 }
 }

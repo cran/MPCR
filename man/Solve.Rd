@@ -1,4 +1,4 @@
-\name{36-Solve}
+\name{35-Solve}
 \alias{solve}
 \alias{MPCR.solve}
 \alias{solve,Rcpp_MPCR-method}
@@ -18,10 +18,11 @@ Solves the equation AX=B .and if B=NULL t(A) will be used.
 Solve a system of equations or invert an MPCR matrix.
 }
 \examples{
-\donttest{
+\dontrun{
 library(MPCR)
 
 x <- as.MPCR(1:20,4,5,"double")
-solve(x)
+y <- crossprod(x)
+solve(y)
 }
 }

@@ -8,43 +8,9 @@
 .onLoad <- function(libname, pkgname) {
 
   loadModule("MPCR", TRUE, loadNow = TRUE)
-  loadModule("MPCRTile", TRUE, loadNow = TRUE)
 
   utils::globalVariables(c("n", "p"))
   suppressMessages({
-  #--------------------------------------------------------------------------------
-  # MPR Tile
-  setMethod("[", signature(x = "Rcpp_MPCRTile"), function(x, i, j, drop = TRUE) {
-    if (missing(j)) {
-      stop("Please Provide a 2D Index")
-    }else {
-      i = i - 1
-      j = j - 1
-      ret <- x$MPCRTile.GetVal(i, j)
-      ret
-    }
-  })
-
-  setReplaceMethod("[", signature(x = "Rcpp_MPCRTile", value = "ANY"), function(x, i, j, ..., value) {
-    if (missing(j)) {
-      stop("Please Provide a 2D Index")
-    }else {
-      i = i - 1
-      j = j - 1
-      x$MPCRTile.SetVal(i, j, value)
-    }
-    x
-  })
-
-  #-------------------------- MPCRTile Print ---------------------------------------
-  setMethod("print", c(x = "Rcpp_MPCRTile"), function(x, ...) {
-    x$MPCRTile.print()
-  })
-  #-------------------------- MPCRTile Linear Algebra ------------------------------
-  setMethod("chol", c(x = "Rcpp_MPCRTile"), MPCRTile.chol)
-
-  #--------------------------------------------------------------------------------
-
   #------------------------------ MPR Class----------------------------------------
   setMethod("[", signature(x = "Rcpp_MPCR"), function(x, i, j, drop = TRUE) {
     if (missing(j)) {
@@ -153,6 +119,9 @@
   # -----------------------------------------------------------------------------
   setMethod("storage.mode", c(x = "Rcpp_MPCR"), MPCR.storage.mode)
   setMethod("typeof", c(x = "Rcpp_MPCR"), MPCR.typeof)
+
+
+
 
 
   # -----------------------------------------------------------------------------
@@ -280,11 +249,8 @@
   })
 
 
-  setMethod("qr", c(x = "Rcpp_MPCR"), function(x, tol) {
-    if (missing(tol)) {
-      tol = 1e-07
-    }
-    ret <- MPCR.qr(x, tol)
+  setMethod("qr", c(x = "Rcpp_MPCR"), function(x) {
+    ret <- MPCR.qr(x)
     names(ret) <- c("qr", "qraux", "pivot", "rank")
     ret
   })
@@ -374,8 +340,8 @@
   })
 
   setMethod("La.svd", c(x = "Rcpp_MPCR"), function(x, nu = min(n, p), nv = min(n, p)) {
-    n = x$Row()
-    p = x$Col()
+    n = x$Row
+    p = x$Col
 
     if (missing(nu)) {
       nu = -1
@@ -413,11 +379,11 @@
     ret
   })
 
-  setMethod("solve", signature(a = "Rcpp_MPCR"), function(a, b, ...) {
+  setMethod("solve", signature(a = "Rcpp_MPCR"), function(a, b,internal_precision="same", ...) {
     if (missing(b)) {
       b = NULL
     }
-    ret <- MPCR.solve(a, b)
+    ret <- MPCR.solve(a, b,internal_precision)
     ret
   })
 

@@ -20,7 +20,7 @@ if (NOT TARGET BLAS)
     else ()
         set(build_tests_save "${build_tests}")
         set(build_tests "false")
-        BuildDependency(blas "https://github.com/OpenMathLib/OpenBLAS" "8795fc7")
+        BuildDependency(blas "https://github.com/xianyi/OpenBLAS" "6287a23")
         set(build_tests "${build_tests_save}")
     endif ()
 

@@ -13,8 +13,6 @@
 #include <data-units/DataType.hpp>
 
 
-#define LAYOUT blas::Layout::ColMajor
-
 
 namespace mpcr {
     namespace operations {
@@ -106,12 +104,16 @@ namespace mpcr {
              * MPCR Matrix B
              * @param[in] aSingle
              * if true only aInputA will be used and for X t(A) will be used.
+             * @param [in] aInternalPrecision
+             * string that indicate the precision used for the LU factorization in
+             * case of using GESV routine in CuSolver ( GPU operation & aSingle == false).
+             * Options: (float or single) ,half ,tensorfloat
              *
              */
             template <typename T>
             void
             Solve(DataType &aInputA, DataType &aInputB, DataType &aOutput,
-                  const bool &aSingle);
+                  const bool &aSingle,const std::string &aInternalPrecision="same");
 
 
             /**
@@ -173,7 +175,7 @@ namespace mpcr {
              */
             template <typename T>
             void
-            Norm(DataType &aInput, const std::string &aType, DataType &aOutput);
+            Norm(DataType &aInput, const std::string &aType, double &aOutput);
 
 
             /**
@@ -202,7 +204,7 @@ namespace mpcr {
             void
             QRDecomposition(DataType &aInputA, DataType &aOutputQr,
                             DataType &aOutputQraux, DataType &aOutputPivot,
-                            DataType &aRank, const double &aTolerance = 1e-07);
+                            DataType &aRank);
 
             /**
              * @brief
@@ -308,6 +310,36 @@ namespace mpcr {
                 DataType &aOutputV, const size_t &aNu,
                 const size_t &aNv, const bool &aTranspose = true);
 
+
+            /**
+             * @brief
+             * The trmm routines compute a scalar-matrix-matrix product
+             * where one of the matrices in the multiplication is triangular.
+             *
+             * @param[in] aInputA
+             * MPCR Matrix
+             * @param[in] aInputB
+             * MPCR Matrix
+             * @param[out] aOutput
+             * The solution of the triangular matrix to matrix multiplication.
+             * @param[in] aLowerTri
+             * logical; if true (default), the lower triangular part of aInputA
+             * is used. Otherwise, the upper one.
+             * @param[in] aTranspose
+             * logical; if true, solve  for t(aInputA) * aInputB == aOutput.
+             * @param[in] aLeftSide
+             * logical; if true, the operation will be as follow:
+             * aOutput = alpha * op(aInputA) * aInputB
+             * otherwise, aOutput = alpha * aInputB * op(aInputA)
+             *
+             */
+
+            template <typename T>
+            void
+            Trmm(DataType &aInputA, DataType &aInputB, DataType &aOutput, const bool &aLowerTri,
+                 const bool &aTranspose, const bool &aLeftSide,
+                 const double &aAlpha);
+
             /**
              * @brief
              * Estimate the reciprocal of the condition number of a matrix.
@@ -328,7 +360,7 @@ namespace mpcr {
              */
             template <typename T>
             void
-            ReciprocalCondition(DataType &aInput, DataType &aOutput,
+            ReciprocalCondition(DataType &aInput, double &aOutput,
                                 const std::string &aNorm,
                                 const bool &aTriangle);
         }

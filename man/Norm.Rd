@@ -1,4 +1,4 @@
-\name{33-Norm}
+\name{32-Norm}
 \alias{norm}
 \alias{MPCR.norm}
 \alias{norm,Rcpp_MPCR-method}
@@ -19,11 +19,9 @@ An MPCR object.
 Compute norm.
 }
 \examples{
-  \donttest{
-
 library(MPCR)
 
 x <- as.MPCR(1:20,precision="double")
 norm(x, type="O")
-}
+
 }
