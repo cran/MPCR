@@ -1,9 +1,9 @@
-afa4db9dbbfc4de44d9381bb623a991e *DESCRIPTION
+74292596365ee273aa4682763c7eb233 *DESCRIPTION
 768064935920069c2cb205623556a20b *NAMESPACE
 94ba8af690ce8989e5ec4a49f2644f7d *R/MPCR.R
-657528eed90c25c9bd99b3ec096ad17d *build/vignette.rds
-d540541b32361e4a7cd2998d2fd2e5cd *cleanup
-2351916ec1b60420340758c0f98579d3 *configure
+2c0c7583992756cfef35aa030f76118a *build/vignette.rds
+fb6349117b7e9ba3be235880ce69d3cd *cleanup
+6e52dc7856764bba21118b234a331590 *configure
 621268094a43e168bbab2af24c3f6242 *inst/CITATION
 194ea727b5edfd94244339f7a9a38099 *inst/doc/MPCR.pdf
 844a929bfb15784dda77d044a1192915 *inst/doc/MPCR.pdf.asis
@@ -110,11 +110,11 @@ f66ace6f28ac131387d6143734bc8b6a *src/cmake/FindR.cmake
 d9137316cadfdf0eb536d038ad8e1e72 *src/cmake/ImportBlasPP.cmake
 24649267cc91feeacb12de9c991224e1 *src/cmake/ImportCuSolver.cmake
 fe015a73e2b363aad9aedf106f914c92 *src/cmake/ImportGFortran.cmake
-c06b6d52ff9a4184480206c915509051 *src/cmake/ImportLapack.cmake
+669012f99f0b68136b739e6b6b859c5c *src/cmake/ImportLapack.cmake
 65ee5848f5e68abca2946d7a8a395922 *src/cmake/ImportLapackPP.cmake
 64f0b19e38a5ea84bfaf76e2173a72ab *src/cmake/ImportOpenMP.cmake
 2a5790dbbde226cea61ca2b81a95a414 *src/cmake/ImportOpenMP_MacoOS.cmake
-ad1baae1cff566f862049bc3c814d926 *src/cmake/macros/BuildDependency.cmake
+c355971bb3ae17635dcf79315f6d2d8b *src/cmake/macros/BuildDependency.cmake
 978759b604306a18040cdbbd21870ab9 *src/cmake/toolchains/CudaToolchain.cmake
 2c1387e724bef76d0445a38048b678fd *src/cmake/toolchains/clang.cmake
 d962cc51786827a7dd4cc2d089c3a3cd *src/cmake/toolchains/gnu.cmake
@@ -140,7 +140,7 @@ ccb6831fc11fb2f1d2e8afa22f6217c2 *src/operations/concrete/CPULinearAlgebra.cpp
 87402bd40053ec3a9240322325206f1e *src/operations/concrete/GPULinearAlgebra.cpp
 aff6855db9c75d5ac4d279ce225166e9 *src/operations/cuda/CMakeLists.txt
 9cc9d08759605c35fe188da34296b96b *src/operations/cuda/GPUHelpers.cu
-649cff3ea5c113beca2fc421be74ed97 *src/symbols.rds
+ea8cf4a7bfc829e44105a409c910af73 *src/symbols.rds
 488a61d3efc1a7c9f429e62454061288 *tests/R-tests/TestCudaStreams.R
 5357f55dc48680b9c069f4fb53a3bdf1 *tests/R-tests/TestMPCRClass.R
 cfabbee5ba8edcb67caa1e960a6c2980 *tests/R-tests/TestMPCRGPU.R

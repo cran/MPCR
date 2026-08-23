@@ -1,8 +1,8 @@
 Package: MPCR
 Type: Package
 Title: Multi Precision Computing
-Version: 2.1.1
-Date: 2026-03-15
+Version: 2.1.2
+Date: 2026-08-23
 Author: David Helmy [aut, cph],
   Sameh Abdulah [cre, cph],
   KAUST King Abdullah University of Science and Technology [fnd, cph],
@@ -15,7 +15,8 @@ Depends: R (>= 3.6.0)
 RoxygenNote: 7.2.3
 VignetteBuilder: R.rsp
 Suggests: R.rsp
-SystemRequirements: C++17, CMake (>=3.20), CUDA (>=11.2)
+SystemRequirements: C++17, CMake (>= 3.20), BLAS, LAPACK (including
+        single-precision complex routines), optional CUDA (>= 11.2)
 NeedsCompilation: yes
 OS_type: unix
 Authors@R: c(
@@ -25,6 +26,6 @@ Authors@R: c(
     person("Brightskies", role=c("cph"))
     )
 URL: https://github.com/stsds/MPCR
-Packaged: 2026-03-15 02:27:01 UTC; ali
+Packaged: 2026-08-23 14:15:37 UTC; docker
 Repository: CRAN
-Date/Publication: 2026-03-15 12:10:20 UTC
+Date/Publication: 2026-08-23 15:40:02 UTC

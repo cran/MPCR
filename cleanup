@@ -20,6 +20,7 @@ rm -rf ./config.sh
 rm -rf ./clean_build.sh
 rm -rf ./..Rcheck/
 rm -rf ./benchmarks/
+rm -rf ./docker/
 rm -rf ./doxygen_config
 rm -rf ./prerequisites/
 rm -rf ./inst/GPU_SUPPORT
